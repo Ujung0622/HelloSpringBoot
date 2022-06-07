@@ -8,12 +8,14 @@ import org.springframework.stereotype.Service;
 import com.hello.mapper.BoardMapper;
 import com.hello.vo.Board;
 
-
 @Service
 public class BoardService {
-	@Autowired private BoardMapper m;
-	
-    public List<Board> getBoard(){
-        return m.getBoard();
-    }
+	@Autowired
+	private BoardMapper m;
+
+	public List<Board> getBoard() {
+		List<Board> lst = m.getBoard();
+		System.out.println("Service");
+		return lst;
+	}
 }

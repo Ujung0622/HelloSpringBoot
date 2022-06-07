@@ -1,6 +1,7 @@
 package com.hello.controller;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,14 +17,24 @@ public class IndexController {
     @Autowired
     private BoardService s;
     
+    @RequestMapping(value="/init", method=RequestMethod.GET)
+    public String init() {	
+    	System.out.println("/controller-init");
+    	return "init";
+    }
+    
     @RequestMapping(value="/", method=RequestMethod.GET)
-    public String root() {
+    public String root() {	
+    System.out.println("/controller");
         return "index";
     }
+    
+    
     @RequestMapping(value="/index", method=RequestMethod.GET)
     public String index() {
         return "index";
     }
+    
     @RequestMapping(value="/board", method=RequestMethod.GET)
     public String board() {
         return "board";
@@ -32,6 +43,7 @@ public class IndexController {
     @RequestMapping(value="/boardList", method=RequestMethod.GET)
     @ResponseBody
     public List<Board> boardList(){
+    	System.out.println("Controller");
         return s.getBoard();
     }
 }

@@ -70,7 +70,7 @@ $(document).ready(function() {
 		        <tbody id = "listArea">
 		        </tbody>
 		    </table>
-			<button type="button" class="btn btn-primary" id = "writeBtn">글쓰기</button>
+			<button type="button" class="btn btn-primary" id ="writeBtn">글쓰기</button>
 		</div>
 	</div>
 </div>

@@ -6,18 +6,16 @@ public class Board {
 	private String title;
 	private String contents;
 	private String image;
-	private String regDate;
 
 	public Board() {
 	};
 	
-	public Board(int boardNo, String title, String contents, String image, String regDate) {
+	public Board(int boardNo, String title, String contents, String image) {
         super();
         this.boardNo = boardNo;
         this.title = title;
         this.contents = contents;
         this.image = image;
-        this.regDate = regDate;
     }
 
 	public int getBoardNo() {
@@ -52,12 +50,4 @@ public class Board {
 		this.image = image;
 	}
 	
-	public String getRegDate() {
-		return regDate;
-	}
-
-	public void setRegDate(String regDate) {
-		this.regDate = regDate;
-	}
-
 }
