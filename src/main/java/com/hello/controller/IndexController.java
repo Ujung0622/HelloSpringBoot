@@ -17,12 +17,6 @@ public class IndexController {
     @Autowired
     private BoardService s;
     
-    @RequestMapping(value="/init", method=RequestMethod.GET)
-    public String init() {	
-    	System.out.println("/controller-init");
-    	return "init";
-    }
-    
     @RequestMapping(value="/", method=RequestMethod.GET)
     public String root() {	
     System.out.println("/controller");
@@ -43,7 +37,6 @@ public class IndexController {
     @RequestMapping(value="/boardList", method=RequestMethod.GET)
     @ResponseBody
     public List<Board> boardList(){
-    	System.out.println("Controller");
         return s.getBoard();
     }
 }
